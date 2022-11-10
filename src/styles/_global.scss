@@ -37,10 +37,7 @@ h1, h2, h3 {
     div, p {
         font-size: 1rem;
     }
-} 
-.App-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+}
+.home-container {
+    background: linear-gradient(180deg, #000E37 0%, rgba(0, 14, 55, 0.79) 49.17%, #000E37 100%);
 }
