@@ -21,7 +21,6 @@ $shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 #nav {
     display: block;
-    height: 20px;
     .navLinks {
         display: flex;
         justify-content: space-around;
@@ -29,7 +28,7 @@ $shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
         width: 30%;
         position: fixed;
         right: 0;
-        top: 0;
+        top: 20px;
         text-align: right;
         z-index: 1;
     }
@@ -98,3 +97,21 @@ $shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
         margin: 20px 40px;
     }
 }
+#footer {
+    text-align: center;
+    .contacts-container {
+      height: 152px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contacts {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 60px;
+    }
+  }
