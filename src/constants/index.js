@@ -1,5 +1,3 @@
-import { projectsPic, experiencePic, contactPic } from "../assets"
-
 export const navLinks = [
     {
         id: 'home',
@@ -47,19 +45,16 @@ export const navCardInfo = [
         id: 'projects',
         number: 1,
         title: 'My Projects',
-        picture: projectsPic
     },
     {
         id: 'about',
         number: 2,
         title: 'About Me',
-        picture: experiencePic
     },
     {
         id: 'contact',
         number: 3,
         title: 'Contact Me',
-        picture: contactPic
     }
 ]
 

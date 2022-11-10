@@ -2,7 +2,9 @@ import React from 'react'
 
 const Modal = () => {
   return (
-    <div>Modal</div>
+    <div id='modal'>
+      Modal
+    </div>
   )
 }
 
