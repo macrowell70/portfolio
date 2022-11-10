@@ -10,6 +10,13 @@ const Home = () => {
           {text.text}
         </h2>
       ))}
+      <div className='card-container'>
+        {navCardInfo.map(card => (
+          <a href={`#${card.id}`} key={card.id}>
+            <Card card={card} />
+          </a>
+        ))}
+      </div>
     </div>
   )
 }
