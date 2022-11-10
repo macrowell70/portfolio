@@ -9,7 +9,7 @@ const Nav = () => {
       <ul className='navLinks'>
         {navLinks.map(link => (
           <li className='navLink' key={link.id}>
-            <Link to={`#${link.id}`}>{link.title}</Link>
+            <a href={`#${link.id}`}>{link.title}</a>
           </li>
         ))}
       </ul> 
