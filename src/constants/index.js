@@ -91,16 +91,25 @@ export const initialFormValues = {
 
 export const projects = [
     {
+        id: 1,
         title: "Mortgage Calculator",
         thumbnail: "https://i.ibb.co/x8NpTpc/29c43a62-65e7-4a3b-b9ca-b41206dd8691.png",
-        description: "An application designed to calculate a recommended mortgage principal and monthly payment based on a users financial profile.",
+        description: "An application designed to calculate a recommended mortgage principal and monthly payment based on a users financial profile. This site was developed with react. I have included it on this page to showcase some of my technical skills and abilities, as well as my knowledge and experience with the banking industry",
         link: "https://mortgage-calculator-omega.vercel.app/"
       },
       {
+        id: 2,
         title: "Fluid Innovations",
         thumbnail: "https://i.ibb.co/g3JVD6f/804eda8e-f958-43b4-8990-a2d2e8fa8c0d.png",
-        description: "This site was created for a local small business",
+        description: "This is a mock site for a local small manufacturing business. I have included it on this page to showcase my front end development and design skills. This site was design on Figma and developed using react and SaSS. The site is fully responsive to alternate devices. Go ahead, check it out on your cell phone!",
         link: "https://fluid-innovations-site.vercel.app/"
+      },
+      {
+        id: 3,
+        title: "Custom API",
+        thumbnail: "https://i.ibb.co/WPNYk8X/API.png",
+        description: "This is a custom built API, that will soon be used to retrieve data to the projects section of this portfolio, making updating this section simple. This was developed using Express.js with knex to build a sqlite database. The API is functioning, however I am working on integrating MongoDB, so I can host it on Heroku. I have included it on this page to showcase my backend engineering skills. I expect to have the final version up and running very soon. The link below will take you to the GitHub repository to view the source code.",
+        link: "https://github.com/macrowell70/portfolio-be"
       }
 ]
 

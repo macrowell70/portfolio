@@ -9,7 +9,7 @@ const Projects = () => {
   const [modalIsActive, setModalIsActive] = useState(false)
 
   useEffect(() => {
-    setProjectsInfo(projects)
+    setProjectsInfo(projects.reverse())
   }, [])
 
   const handleMouseEnter = (evt, i) => {
