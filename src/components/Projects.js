@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { Modal } from './index'
+import { projects } from '../constants'
 
 const Projects = () => {
-  const [projects, setProjects] = useState()
+  const [projectsInfo, setProjectsInfo] = useState()
   const [currentProject, setCurrentProject] = useState(null)
   const [projectIsExpanded, setProjectIsExpanded] = useState(false)
   const [modalIsActive, setModalIsActive] = useState(false)
 
   useEffect(() => {
-    axios.get('http://localhost:9000/projects')
-    .then(res => setProjects(res.data.reverse()))
-    .catch(err => console.error(err))
+    setProjectsInfo(projects)
   }, [])
 
   const handleMouseEnter = (evt, i) => {
@@ -34,7 +32,7 @@ const Projects = () => {
   }
 
   const paginate = (first, last) => {
-    const projectsShown = projects.slice(first, last)
+    const projectsShown = projectsInfo.slice(first, last)
     return projectsShown
   }
 
@@ -42,7 +40,7 @@ const Projects = () => {
     <div id='projects' >
       <h2>My Projects</h2>
         <div className='projects'>
-          {projects && paginate(0, 6).map((project, i) => (
+          {projectsInfo && paginate(0, 6).map((project, i) => (
             <div 
               className='project'
               key={project.id}
