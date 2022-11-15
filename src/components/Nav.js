@@ -22,7 +22,7 @@ const Nav = (props) => {
         ))}
       </ul>}
       {!matches &&
-      <div className='mobile-nav-container'>
+      <div className='nav-container-mobile'>
         <img 
           src={!menuOpen ? menu : close} 
           alt="menu icon" 

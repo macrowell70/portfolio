@@ -38,6 +38,23 @@ $shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
             opacity: 1;
         }
     }
+    .nav-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 10px;
+    }
+    .navLinks-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    .navLink-mobile {
+        text-align: center;
+    }
 }
 #home {
     height: 100vh;
