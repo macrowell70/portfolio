@@ -1,12 +1,60 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { formFields } from '../constants'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form = useRef()
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    emailjs.sendForm(
+      process.env.REACT_APP_SERVICE_ID, 
+      process.env.REACT_APP_TEMPLATE_ID, 
+      form.current, 
+      process.env.REACT_APP_PUBLIC_KEY
+    )
+    .then(result => {
+      console.log(result.text)
+      evt.target.reset()
+    })
+    .catch(err => console.error(err.text))
+  }
 
   return (
     <div id='contact'>
       <h2 className='contact-header'>Contact Me</h2>
-      <p>Please feel free to email or call me at the contact information provided below, or click to icons to check out my other pages. You can read all about me on LinkedIn, or see my GitHub account to see what I have been working on and even view the source code for this portfolio page.</p><br></br>
-      <p>I hope to hear from you soon!</p>
+      <div className='form-container'>
+        <form ref={form} className='contact-form' onSubmit={handleSubmit}>
+          {formFields.map(field => (
+            <input
+              key={field.name}
+              id={field.name}
+              className='form-field'
+              placeholder={field.placeholder}
+              name={field.name}
+              type={field.type}
+            />
+          ))}
+          <textarea 
+            id='message'
+            className='form-field'
+            placeholder='Message*'
+            name='message'
+          />
+          <div className='button-container'>
+            <input 
+              type='submit' 
+              value='Send Message'
+              className='contact-form-submit' 
+            />
+            <input
+              type='button'
+              value='Reset Form'
+              className='contact-form-reset'
+            />
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

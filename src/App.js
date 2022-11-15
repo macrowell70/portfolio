@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './App.scss';
-
 import { Nav, Home, Projects, About, Contact, Footer } from './components';
 
 const mediaMatch = window.matchMedia("(min-width: 768px)")
