@@ -15,6 +15,7 @@ const Contact = () => {
     )
     .then(result => {
       console.log(result.text)
+      alert("Thank you! Your message has been sent, and I will get back with you as soon as possible")
       evt.target.reset()
     })
     .catch(err => console.error(err.text))
