@@ -20,6 +20,16 @@ const Contact = () => {
     .catch(err => console.error(err.text))
   }
 
+  const setValidity = evt => {
+    evt.target.setCustomValidity(
+      evt.target.value ? '' : `Fields with "*" are required`
+    )
+  }
+
+  const handleReset = evt => {
+    evt.target.form.reset()
+  }
+
   return (
     <div id='contact'>
       <h2 className='contact-header'>Contact Me</h2>
@@ -30,9 +40,15 @@ const Contact = () => {
               key={field.name}
               id={field.name}
               className='form-field'
-              placeholder={field.placeholder}
+              placeholder={
+                field.required ? 
+                `${field.placeholder}*` 
+                : field.placeholder}
               name={field.name}
               type={field.type}
+              required={field.required}
+              onInvalid={setValidity}
+              onInput={setValidity}
             />
           ))}
           <textarea 
@@ -40,6 +56,9 @@ const Contact = () => {
             className='form-field'
             placeholder='Message*'
             name='message'
+            required={true}
+            onInvalid={setValidity}
+            onInput={setValidity}
           />
           <div className='button-container'>
             <input 
@@ -51,6 +70,7 @@ const Contact = () => {
               type='button'
               value='Reset Form'
               className='contact-form-reset'
+              onClick={handleReset}
             />
           </div>
         </form>

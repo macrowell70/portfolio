@@ -61,24 +61,28 @@ export const navCardInfo = [
 export const formFields = [
     {
         name: 'fname',
-        placeholder: 'First Name*',
-        type: 'text'
+        placeholder: 'First name',
+        type: 'text',
+        required: true
     },
     {
         name: 'lname',
-        placeholder: 'Last Name*',
-        type: 'text'
+        placeholder: 'Last name',
+        type: 'text',
+        required: true
     },
     {
         name: 'email',
-        placeholder: 'Email*',
-        type: 'email'
+        placeholder: 'Email',
+        type: 'email',
+        required: true
     },
     {
         name: 'business',
         placeholder: 'Business or Organization',
-        type: 'text'
-    }
+        type: 'text',
+        required: false
+    },
 ]
 
 export const initialFormValues = {
